@@ -28,7 +28,6 @@ class PictureView(CreateAPIView):
                 width=int(request.data.get('width')),
             ).first()
         if image:
-            logger.info(f'Image already exists: {image.file}')
             serializer = self.get_serializer(image)
             return Response(serializer.data,
                             status=status.HTTP_201_CREATED,

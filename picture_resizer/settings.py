@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "restframework",
-    "resizer.apps.ResizerConfig",
+    "api.apps.ResizerConfig",
 ]
 
 MIDDLEWARE = [

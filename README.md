@@ -35,3 +35,32 @@
 5. Run application on dev server:
 
    ``` python manage.py runserver```
+
+
+### Request example
+
+#### POST /api/resize_picture/
+
+   Fields:
+   * file - *.png, *.jpeg, *.jpg
+   * width - width size to resize in px
+   * height - height size to resize in px (optional)
+
+multipart/form-data
+
+```
+   "file": my_favorite_picture.jpg
+   "width": 100 
+   "hight": 100
+```
+
+Response:
+
+```
+{
+    "file": "http://<host>/mediafiles/images/default/my_favorite_picture.jpg",
+    "resized": "http://<host>/mediafiles/images/resized/cb1b69b0a88d063616519790289cbba4_100x100.JPEG",
+    "width": 100,
+    "height": 148
+}
+```

@@ -8,5 +8,3 @@ urlpatterns = [
          name='resize_image',
          ),
 ]
-
-

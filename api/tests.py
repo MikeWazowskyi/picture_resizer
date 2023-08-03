@@ -80,7 +80,7 @@ class PictureViewTestCase(TestCase):
     @override_settings(MEDIA_ROOT=TMP_MEDIA_ROOT)
     def test_create_new_picture_with_no_high_has_correct_size(self):
         self.client.post(self.url, self.no_high_data,
-                                    format='multipart')
+                         format='multipart')
         picture = Picture.objects.first()
         expected_height = int(
             self.picture_high / self.picture_width * self.width

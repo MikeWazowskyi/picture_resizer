@@ -1,4 +1,4 @@
-# picture_resizer
+# Picture Resizer
 
 ## Description
 

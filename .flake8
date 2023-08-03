@@ -1,0 +1,4 @@
+[flake8]
+ignore = E501,W503,E203
+exclude = migrations,__pycache__,venv,picture_resizer/settings.py
+max-line-length = 88

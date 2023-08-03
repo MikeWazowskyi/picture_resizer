@@ -66,3 +66,6 @@ Response:
     "height": 148
 }
 ```
+
+### Abouth Author:
+https://github.com/MikeWazowskyi

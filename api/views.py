@@ -16,17 +16,14 @@ class PictureView(CreateAPIView):
 
     def create(self, request, *args, **kwargs):
         logger.info(f'Request: {request.method} {request.path}')
+        search_params = dict(
+            file__contains=request.data.get('file'),
+            width=int(request.data.get('width')),
+        )
         if 'height' in request.data:
-            image = Picture.objects.filter(
-                file__contains=request.data.get('file'),
-                width=int(request.data.get('width')),
-                height=int(request.data.get('height'))
-            )
-        else:
-            image = Picture.objects.filter(
-                file__contains=request.data.get('file'),
-                width=int(request.data.get('width')),
-            ).first()
+            search_params['height'] = int(request.data.get('height'))
+
+        image = Picture.objects.filter(**search_params).first()
         if image:
             serializer = self.get_serializer(image)
             return Response(serializer.data,

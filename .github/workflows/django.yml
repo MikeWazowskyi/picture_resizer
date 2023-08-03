@@ -26,7 +26,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: flake8 tests
-      run: flake8 .
+      run: |
+        pip install flake8
+        flake8 .
     - name: Set up database and run migrations
       run: |
           python manage.py migrate

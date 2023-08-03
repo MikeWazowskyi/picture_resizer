@@ -1,5 +1,7 @@
 # Picture Resizer
 
+[![Django CI](https://github.com/MikeWazowskyi/picture_resizer/actions/workflows/django.yml/badge.svg)](https://github.com/MikeWazowskyi/picture_resizer/actions/workflows/django.yml)
+
 ## Description
 
 #### Implementation of a simple Django RESTfull server, which make resize of pictures.
